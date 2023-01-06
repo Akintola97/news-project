@@ -9,8 +9,8 @@ const url = `https://newsapi.org/v2/everything?q=playstation&apiKey=${apiKey}`
 newsRouter.get('/', async(req, res)=> {
     try {
         const newsApi = await axios.get(url)
-        .then(res => res.json(data))
-        console.log(data)
+        res.render('news', {data: newsApi.data})
+        
     }
     catch(error){
        console.log(error)
@@ -18,6 +18,8 @@ newsRouter.get('/', async(req, res)=> {
         
     
 });
+
+
 
 
 module.exports = newsRouter

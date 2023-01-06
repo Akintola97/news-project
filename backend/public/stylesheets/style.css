@@ -1,8 +1,28 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+img{
+    max-width: 100%;
 }
 
-a {
-  color: #00B7FF;
+.wrapper{
+    padding:0 1rem;
+}
+
+.news{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap:2rem;
+}
+
+.news__card{
+    color:rgb(8,8,8);
+    background-color: white;
+    padding:20px;
+}
+
+.news__card:hover{
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+    transition: all 0.75 ease-in-out;
+}
+
+.news-display{
+    background-color: black;
 }

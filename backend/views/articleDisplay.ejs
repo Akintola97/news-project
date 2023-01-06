@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet">
     <title>Node News</title>
 </head>
 
@@ -20,20 +20,15 @@
 
 
 <body>
-    <div class="wrapper">
-        <div class = "news">  
-            <% if (data.articles != null){ %>
-            <%data.articles.forEach((article)=>{ %>
-            <a href ='/article/<%=article.title%>' class = "news__card text-decoration-none text-black">
-            <img src = "<%= article.urlToImage %>"  alt= <%= article.title %>>
-             <h3 class="text-center"> <%- article.title %></h3> 
-               <p class="text-center"> <%= article.description %></p>
-               <p class="text-center"> <%= article.publishedAt %></p>
-               </a>
-               <%  })%>
-               <% } else { %>
-                No article found
-            <% } %>
+    <div class="display-wrapper">
+        <div class = "news-display">  
+           
+               <h3> <%= display.articles.title %></h3> 
+               <p> <%=  display.articles.content %></p>
+
+      
+
+           
             
     
     
