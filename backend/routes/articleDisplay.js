@@ -9,7 +9,7 @@ const apiKey = process.env.API_KEY
 
 articleRouter.get('/:title', async(req, res)=> {
     const articleTitle = req.params.title
-    const url = `https://newsapi.org/v2/everything?q=playstation&id=${articleTitle}&apiKey=${apiKey}`
+    const url = `https://newsapi.org/v2/everything?q=playstation&title=${articleTitle}&apiKey=${apiKey}`
     try {
         const newsApi = await axios.get(url)
         res.render('articleDisplay', {display: newsApi.data})
