@@ -1,9 +1,19 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 img{
     max-width: 100%;
 }
 
-.wrapper{
-    padding:0 1rem;
+.header-tabs{
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .news{
@@ -26,3 +36,13 @@ img{
 /* .news-display{
     background-color: black;
 } */
+
+.search-bar{
+    border-radius: 25px;
+}
+
+.submit{
+    border-radius: 25px;
+    cursor: pointer;
+   
+}

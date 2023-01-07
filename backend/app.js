@@ -6,7 +6,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser')
 require('dotenv').config();
 var newsRouter = require('./routes/news');
-var articleDisplay = require('./routes/articleDisplay');
+
 
 
 // view engine setup
@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.use('/', newsRouter)
-app.use('/article', articleDisplay)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
