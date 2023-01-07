@@ -24,7 +24,7 @@
         <div class = "news">  
             <% if (data.articles != null){ %>
             <%data.articles.forEach((article)=>{ %>
-            <a href ='/article/<%=article.title%>' class = "news__card text-decoration-none text-black">
+            <a href ='/article/<%=article.url%>' class = "news__card text-decoration-none text-black">
             <img src = "<%= article.urlToImage %>"  alt= <%= article.title %>>
              <h3 class="text-center"> <%- article.title %></h3> 
                <p class="text-center"> <%= article.description %></p>
