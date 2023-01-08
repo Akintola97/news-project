@@ -8,19 +8,40 @@
 
 img{
     max-width: 100%;
+    overflow: hidden;
 }
 
-.header-tabs{
-    display: flex;
-    flex-wrap: wrap;
-    
+@media only screen and (max-width:600px){
+.header__logo{
+    display: none;
 }
+}
+
+
+.header-tabs{
+       display: flex;
+       justify-content: space-between;
+    }
+    
+
+
+
+@media only screen and (max-width:600px){
+    .header-tabs{
+       display: flex;
+       justify-content: center;
+    }
+    }
+
 
 .news{
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));
     grid-gap:2rem;
+    overflow: hidden;
+    justify-content: center;
 }
+
 
 .news__card{
     color:rgb(8,8,8);
@@ -36,6 +57,8 @@ img{
 /* .news-display{
     background-color: black;
 } */
+
+
 
 .search-bar{
     border-radius: 25px;
